@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150420190240) do
+ActiveRecord::Schema.define(version: 20150421005954) do
 
   create_table "channels", force: :cascade do |t|
     t.string   "name",       limit: 255
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20150420190240) do
     t.text     "content",    limit: 65535
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
+    t.integer  "channel_id", limit: 4
   end
 
   create_table "users", force: :cascade do |t|
